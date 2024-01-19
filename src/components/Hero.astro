@@ -1,0 +1,65 @@
+---
+import { Image } from "astro:assets";
+
+import welder from "../images/welder.png";
+---
+
+<div class="hero-wrapper">
+  <div class="hero-text grid-item">
+    <h1 class="hero-heading">Bhagwati<br />Industries</h1>
+    <h2 class="hero-subheading">
+      Forging Excellence, Shaping Tomorrow 40 Years of Metal Mastery
+    </h2>
+  </div>
+  <div class="hero-cta grid-item">
+    <Image
+      class="heroImage"
+      src={welder}
+      alt="Welder"
+      style={{ objectFit: "contain" }}
+    />
+  </div>
+</div>
+
+<style>
+  .hero-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "hero-text hero-text ."
+      "heroImage heroImage nav"
+      "heroImage heroImage .";
+    padding-top: 3rem;
+  }
+  .heroImage {
+    grid-area: heroImage;
+    width: 60vw;
+    height: auto;
+  }
+  .grid-item {
+    border: 1px solid black;
+    padding: 5px;
+  }
+  .hero-subheading {
+    margin: 0;
+    font-size: 2em;
+  }
+  .hero-heading {
+    margin: 0;
+    line-height: 1;
+    font-size: 7em;
+  }
+  .hero-cta {
+    /* background-color: blue; */
+  }
+  .hero-text {
+    /* background-color: orange; */
+    grid-area: hero-text;
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+  }
+</style>
