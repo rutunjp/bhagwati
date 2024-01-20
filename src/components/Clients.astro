@@ -1,0 +1,81 @@
+---
+import pakona from "../images/clients/pakona.png";
+import banco from "../images/clients/banco.png";
+import columbia from "../images/clients/columbia.png";
+import mespack from "../images/clients/mespack.png";
+import pcube from "../images/clients/pcube.png";
+import valeo from "../images/clients/valeo.png";
+
+import { Image } from "astro:assets";
+---
+
+<div class="logos">
+  <div class="logos-slide">
+    <Image style={{ height: "50px" }} alt="client-logo" src={pakona} />
+    <Image style={{ height: "50px" }} alt="client-logo" src={banco} />
+    <Image style={{ height: "50px" }} alt="client-logo" src={columbia} />
+    <Image style={{ height: "50px" }} alt="client-logo" src={mespack} />
+    <Image style={{ height: "50px" }} alt="client-logo" src={pcube} />
+    <Image style={{ height: "50px" }} alt="client-logo" src={valeo} />
+  </div>
+
+  <div class="logos-slide">
+    <Image style={{ height: "50px" }} alt="client-logo" src={pakona} />
+    <Image style={{ height: "50px" }} alt="client-logo" src={banco} />
+    <Image style={{ height: "50px" }} alt="client-logo" src={columbia} />
+    <Image style={{ height: "50px" }} alt="client-logo" src={mespack} />
+    <Image style={{ height: "50px" }} alt="client-logo" src={pcube} />
+    <Image style={{ height: "50px" }} alt="client-logo" src={valeo} />
+  </div>
+</div>
+
+<style>
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  .logos {
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+
+  .logos:before {
+    left: 0;
+    background: #f4f4f3;
+  }
+
+  .logos:after {
+    right: 0;
+    background: #f4f4f3;
+  }
+
+  .logos:hover .logos-slide {
+    animation-play-state: paused;
+  }
+
+  .logos-slide {
+    display: inline-block;
+    animation: 30s slide infinite linear;
+  }
+
+  .logos-slide img {
+    height: 50px;
+    margin: 0 40px;
+  }
+</style>

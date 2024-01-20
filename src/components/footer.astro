@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import circularLogo from "../images/circular-logo.png";
+---
+
+<div class="footer">
+  <Image src={circularLogo} alt="Circular logo" />
+  <p>+91-6684384868</p>
+  <p>+91-9959696954</p>
+  <p>bhagwatiIndustries@gmail.com</p>
+  <address>
+    Bhagwati Industries, GIDC Road, Makarpura GIDC, Makarpura, Vadodara,
+    Gujarat, India
+  </address>
+</div>
+
+<style>
+  .footer {
+    background-color: #000;
+    display: grid;
+  }
+</style>
