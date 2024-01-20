@@ -23,17 +23,48 @@ import welder from "../images/welder.png";
     </ul>
   </nav>
 </div>
-
 <style>
+  body {
+    margin: 0;
+    font-family: "RedHatDisplayMedium", sans-serif;
+    background-color: #f4f4f3;
+  }
+
   .nav-links {
     color: black;
     grid-area: nav-links;
     font-size: xx-large;
   }
-  ul {
-    margin-top: 0px;
-    list-style: none;
+
+  a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease-in-out;
   }
+
+  a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  a:hover {
+    color: black;
+  }
+
+  a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
   .hero-wrapper {
     display: grid;
     max-width: 100%;
@@ -45,62 +76,88 @@ import welder from "../images/welder.png";
       "hero-cta hero-cta ";
     padding-top: 2rem;
     overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
   }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   @media only screen and (max-width: 767px) {
     .hero-wrapper {
       grid-template-columns: 90vw auto;
       grid-template-rows: 1fr 90vh;
-    }
-
-    .hero-wrapper {
       grid-template-areas:
         "hero-text hero-text"
         "hero-cta nav-links";
     }
+
+    .hero-heading {
+      font-size: 4rem;
+    }
+
+    .hero-subheading {
+      max-width: 80vw;
+      font-size: 1rem;
+      white-space: nowrap;
+    }
   }
 
-  .hero-cta {
-    grid-area: hero-cta;
-    overflow: hidden;
-  }
   .hero-image {
     width: 100%;
     height: 120%;
     object-position: bottom;
     object-fit: cover;
     filter: grayscale(0.8);
-    transition: 350ms;
+    transition:
+      filter 0.35s,
+      height 0.35s;
   }
+
   .hero-image:hover {
     filter: grayscale(0);
     object-position: center;
     height: 130%;
   }
 
-  .hero-subheading { 
+  .hero-subheading {
     font-size: 2rem;
   }
+
   .hero-heading {
     margin: 0;
     line-height: 1;
     font-size: 7rem;
+    color: #000; /* Set your desired text color */
+    font-weight: bolder;
   }
-
+  ul {
+    list-style: none;
+  }
   .hero-text {
     grid-area: hero-text;
     display: flex;
     flex-direction: column;
     text-align: left;
   }
+
   @media only screen and (max-width: 767px) {
     .hero-heading {
       font-size: 4rem;
     }
+
     .hero-subheading {
       max-width: 80vw;
       font-size: 1rem;
-      text-wrap: wrap;
-      word-wrap: wrap;
+      white-space: nowrap;
     }
   }
 </style>
