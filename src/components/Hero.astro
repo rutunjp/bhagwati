@@ -6,7 +6,7 @@ import welder from "../images/welder.png";
 
 <div class="hero-wrapper">
   <div class="hero-text">
-    <h1 class="hero-heading">Bhagwati<br />Industries</h1>
+    <h1 class="hero-heading heading">Bhagwati<br />Industries</h1>
     <p class="hero-subheading">
       Forging Excellence, Shaping Tomorrow 40 Years of Metal Mastery
     </p>
@@ -36,7 +36,7 @@ import welder from "../images/welder.png";
   }
   .hero-wrapper {
     display: grid;
-    width: 90vw;
+    max-width: 90vw;
     max-height: 90vh;
     grid-template-columns: 60vw auto;
     grid-template-rows: 1fr 40vh;
@@ -73,6 +73,7 @@ import welder from "../images/welder.png";
   }
   .hero-image:hover {
     filter: grayscale(0);
+    object-position: center;
     height: 130%;
   }
 
@@ -91,5 +92,13 @@ import welder from "../images/welder.png";
     display: flex;
     flex-direction: column;
     text-align: left;
+  }
+  @media only screen and (max-width: 767px) {
+    .hero-heading {
+      font-size: 4rem;
+    }
+    .hero-subheading {
+      font-size: 1rem;
+    }
   }
 </style>

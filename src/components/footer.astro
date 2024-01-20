@@ -3,20 +3,85 @@ import { Image } from "astro:assets";
 import circularLogo from "../images/circular-logo.png";
 ---
 
-<div class="footer">
-  <Image src={circularLogo} alt="Circular logo" />
-  <p>+91-6684384868</p>
-  <p>+91-9959696954</p>
-  <p>bhagwatiIndustries@gmail.com</p>
-  <address>
+<footer class="footer">
+  <Image class="footer-logo" src={circularLogo} alt="logo" />
+  <div class="contact">
+    <h2>+91-9963636362</h2>
+
+    <h2>+91-9963636362</h2>
+
+    <h2>inquiry@bhagwatiind.com</h2>
+  </div>
+  <p class="address">
     Bhagwati Industries, GIDC Road, Makarpura GIDC, Makarpura, Vadodara,
     Gujarat, India
-  </address>
-</div>
-
+  </p>
+  <p class="copyright">
+    Bhagwati Industries Copyright © 2024 - All rights reserved
+  </p>
+  <p class="credit">Made by <a href="https://twitter.com/rutunj3">rutunj</a></p>
+</footer>
 <style>
   .footer {
-    background-color: #000;
     display: grid;
+    row-gap: 2rem;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    padding: 1em 0;
+    color: #f4f4f3;
+    background-color: #1a1a1a;
+    grid-template-columns: 1fr 4fr 2fr;
+    grid-template-rows: 2fr 0.5fr;
+    grid-template-areas:
+      "footer-logo contact address"
+      ". copyright credit";
+  }
+  .footer-logo {
+    grid-area: footer-logo;
+    height: auto;
+    margin: auto;
+    max-width: 100%;
+  }
+
+  .address {
+    max-width: fit-content;
+    grid-area: address;
+    margin: auto;
+    text-align: center;
+  }
+  .contact * {
+    grid-area: contact;
+    width: max-content;
+    transition: 500ms ease;
+    padding: 0 1em;
+    margin: 0;
+  }
+  .contact *:hover {
+    background-color: #f4f4f3;
+    color: #1a1a1a;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .footer {
+      grid-template-columns: 2fr 4fr;
+      grid-template-rows: 2fr 1fr 1fr;
+      grid-template-areas:
+        "footer-logo contact"
+        "address address"
+        "credit copyright";
+      justify-content: "center";
+    }
+  }
+  .copyright {
+    grid-area: copyright;
+    opacity: 0.6;
+    color: aliceblue;
+  }
+  .credit {
+    grid-area: credit;
+    opacity: 0.6;
+    color: aliceblue;
   }
 </style>

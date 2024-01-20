@@ -1,3 +1,7 @@
+---
+import Clients from "./Clients.astro";
+---
+
 <div class="about-wrapper">
   <div class="header">
     <h2 class="heading">About Us</h2>
@@ -29,6 +33,7 @@
       </p>
     </div>
   </div>
+  <Clients />
 </div>
 
 <style>
@@ -37,6 +42,7 @@
     flex-direction: column;
     gap: 4rem;
   }
+
   .description {
     max-width: 30%;
   }
@@ -66,8 +72,8 @@
     .features-grid {
       flex-direction: column;
     }
-     .about-wrapper{
+    .about-wrapper {
       gap: 2rem;
-     }
+    }
   }
 </style>
