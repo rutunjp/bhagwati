@@ -36,7 +36,7 @@ import welder from "../images/welder.png";
   }
   .hero-wrapper {
     display: grid;
-    max-width: 90vw;
+    max-width: 100%;
     max-height: 90vh;
     grid-template-columns: 60vw auto;
     grid-template-rows: 1fr 40vh;
@@ -77,8 +77,7 @@ import welder from "../images/welder.png";
     height: 130%;
   }
 
-  .hero-subheading {
-    margin: 0;
+  .hero-subheading { 
     font-size: 2rem;
   }
   .hero-heading {
@@ -98,7 +97,10 @@ import welder from "../images/welder.png";
       font-size: 4rem;
     }
     .hero-subheading {
+      max-width: 80vw;
       font-size: 1rem;
+      text-wrap: wrap;
+      word-wrap: wrap;
     }
   }
 </style>
