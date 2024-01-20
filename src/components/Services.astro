@@ -1,0 +1,80 @@
+<div class="services-wrapper">
+  <h2 class="heading">Services</h2>
+  <ul class="services">
+    <li>Turnkey projects</li>
+    <li>Structural & Heavy Fabrication</li>
+    <li>Material Handling Equipments</li>
+    <li>Customer Specific Fabrication & Manufacturing</li>
+    <li>Structural & Heavy Fabrication</li>
+    <li>High Grade Coating & Painting</li>
+  </ul>
+</div>
+
+<style>
+  .services-wrapper {
+    padding-top: 8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+  }
+  .services-wrapper ul:last-child {
+    border-bottom: 1px solid black;
+  }
+  .services-wrapper ul li:hover { 
+    text-decoration: none; /* Add this line to remove the underline on hover */
+  }
+
+  ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    font-size: 2rem;
+  }
+
+  li {
+    text-decoration: none;
+  }
+  @media only screen and (max-width: 767px) {
+    .services-wrapper {
+      flex-direction: column;
+    }
+    .services-wrapper ul {
+      font-size: 1rem;
+      padding: 0;
+    }
+
+    .services-wrapper ul li {
+      margin-left: auto;
+      padding-right: 0;
+
+      border-top: 1px solid black;
+    }
+    .services-wrapper h2 {
+      margin: 0px;
+    }
+  }
+  .services-wrapper ul li {
+    padding: 0rem;
+    border-top: 1px solid black;
+    transition: 250ms ease-in;
+  }
+  .services-wrapper ul li:hover {
+    background-color: #e0e0e0;
+
+    transform-origin: 0 50%;
+  }
+
+  ul {
+    margin: 0px;
+    list-style: none;
+    padding: 0px;
+    font-size: 2rem;
+  }
+  li {
+    text-decoration: none;
+  }
+  li:hover {
+    text-decoration: underline;
+    transition: all;
+  }
+</style>

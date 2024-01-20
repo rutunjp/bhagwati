@@ -1,0 +1,73 @@
+<div class="about-wrapper">
+  <div class="header">
+    <h2 class="heading">About Us</h2>
+    <p class="description">
+      We've successfully achieved and completed thousands of projects since in
+      over 40+ years of our business, lead through three generations coming up
+      with technical as well as managerial advances.
+    </p>
+  </div>
+  <div class="features-grid">
+    <div class="feature">
+      <h1>40<sup>+</sup></h1>
+      <p>years of experience</p>
+    </div>
+    <div class="feature">
+      <h1>ISO Certified</h1>
+      <p>
+        We are an ISO 9001:2015, ISO 3834-2:2021 & ISO 14001:2015 certified
+        company. Also prepared to cater any other client-specific quality &
+        management requirements.
+      </p>
+    </div>
+    <div class="feature">
+      <h1>18000<sup>+</sup></h1>
+      <p>
+        Our manufacturing facilities are widespread in a total area of 18,000+
+        sq. ft. collectively, with best-in-class infrastructural and
+        manufacturing facilities.
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .about-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .description {
+    max-width: 30%;
+  }
+  .features-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 8px;
+    flex-grow: 1;
+    flex-basis: 0;
+    border-left: 2px black solid;
+  }
+  .feature * {
+    margin: 0;
+  }
+  @media only screen and (max-width: 767px) {
+    .description {
+      max-width: 100%;
+      margin-left: auto;
+    }
+    .features-grid {
+      flex-direction: column;
+    }
+     .about-wrapper{
+      gap: 2rem;
+     }
+  }
+</style>

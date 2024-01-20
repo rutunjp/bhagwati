@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Hero from "../components/Hero.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <div class="wrapper">
+    <div class="content1">
+      <p>hii</p>
+    </div>
+
+    <div class="content2">
+      <p>hii</p>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .wrapper {
+    display: grid;
+    grid-template-columns: 60% auto;
+    grid-template-rows: 30vh 20vh;
+    grid-template-areas:
+      "content1 ."
+      ". content2";
+    height: 80vh;
+    background-color: aqua;
+    padding: 0 10em;
+  }
+  .content1 {
+    grid-area: content1;
+    background-color: green;
+  }
+  .content2 {
+    grid-area: content2;
+    background-color: blueviolet;
+  }
+</style>
