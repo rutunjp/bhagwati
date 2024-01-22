@@ -1,0 +1,15 @@
+---
+const props = Astro.props;
+---
+
+<div class="card">
+  <h1>{props.caseStudyName}</h1>
+</div>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 2;
+  }
+</style>
