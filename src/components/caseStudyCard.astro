@@ -1,15 +1,23 @@
 ---
+import { Image } from "astro:assets";
+
 const props = Astro.props;
 ---
 
-<div class="card">
-  <h1>{props.caseStudyName}</h1>
-</div>
+<a href={"/casestudy"}>
+  <div class="card">
+    <Image class="image" src={props.caseStudy} alt="casestudy" />
+    <h1>{props.caseStudyName}</h1>
+    <h3>{props.serviceProvided}</h3>
+  </div>
 
-<style>
-  .card {
-    display: flex;
-    flex-direction: column;
-    gap: 2;
-  }
-</style>
+  <style>
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 2;
+    }
+    .image {
+    }
+  </style>
+</a>

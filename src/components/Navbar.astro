@@ -1,0 +1,94 @@
+---
+import { Image } from "astro:assets";
+import logo from "../images/logo.png";
+---
+
+<header class="navbar">
+  <div class="logo">
+    <a class="logo-link" href="/"
+      ><Image
+        class="logo-wrapper"
+        src={logo}
+        alt="Bhagwati logo"
+        format="avif"
+      /></a
+    >
+  </div>
+  <nav class="nav-links">
+    <a href="">Infrastructure</a>
+    <a href="">Services</a>
+    <a href="/casestudy">Case Studies</a>
+    <a href="">About Us</a>
+  </nav>
+</header>
+
+<style>
+  /* Navbar Styles */
+  .navbar {
+    max-width: 100%;
+    background-color: transparent;
+    overflow: hidden;
+    margin: auto;
+    padding: 1rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo img {
+    max-width: 164px; /* Adjust as needed */
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  /* Style only links inside .nav-links, excluding the logo link */
+  .nav-links a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-links a:hover {
+    color: black;
+  }
+
+  .nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  /* Media Query for Responsive Design */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      font-size: 10px;
+      padding: 1rem 4rem;
+    }
+
+    .logo img {
+      max-width: 128px; /* Adjust as needed */
+    }
+
+    .nav-links {
+      margin-top: 10px;
+      /* Move nav-links above the logo in the column layout */
+    }
+  }
+</style>

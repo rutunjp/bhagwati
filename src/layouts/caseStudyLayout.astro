@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+import Layout from "./Layout.astro";
+import caseStudyImage from "../images/caseStudies/reliance/reliance.jpg";
+import caseStudyImage2 from "../images/caseStudies/reliance/reliance2.jpg";
+import caseStudyImage3 from "../images/caseStudies/reliance/reliance2.jpg";
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <div class="caseStudy-wrapper">
+    <h1>{frontmatter.title}</h1>
+    <Image src={caseStudyImage} alt="caseStudy" />
+    <Image src={caseStudyImage2} alt="caseStudy" />
+    <Image src={caseStudyImage3} alt="caseStudy" />
+    <slot />
+  </div>
+</Layout>
+<style>
+  * {
+    background-color: rgb(219, 227, 234);
+  }
+  .caseStudy-wrapper {
+    padding: 0.1rem 2rem;
+    width: 80%;
+    margin: auto;
+  }
+</style>
