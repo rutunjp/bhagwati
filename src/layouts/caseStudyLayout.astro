@@ -10,20 +10,42 @@ const { frontmatter } = Astro.props;
 <Layout title={frontmatter.title}>
   <div class="caseStudy-wrapper">
     <h1>{frontmatter.title}</h1>
+
     <Image src={caseStudyImage} alt="caseStudy" />
     <Image src={caseStudyImage2} alt="caseStudy" />
     <Image src={caseStudyImage3} alt="caseStudy" />
-    <slot />
+    <div class="details-wrapper">
+      <slot />
+    </div>
   </div>
 </Layout>
 <style>
   * {
-    background-color: rgb(219, 227, 234);
+    background-color: #ebebeb;
+  }
+  .details-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
   .caseStudy-wrapper {
     padding: 0.1rem 2rem;
     width: 80%;
     margin: auto;
   }
- 
+  ,
+  .case-study-table {
+    border: 1px solid #ddd;
+    margin-bottom: 1em;
+  }
+
+  .case-study-table th {
+    font-weight: bold;
+    text-align: left;
+    padding: 0.5em;
+  }
+
+  .case-study-table td {
+    padding: 0.5em;
+    text-align: left;
+  }
 </style>

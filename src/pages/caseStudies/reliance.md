@@ -18,6 +18,8 @@ tags: ["astro", "blogging", "learning in public"]
 
 ### Project Details
 
+<div class="case-study-table">
+
 | **Project Name**       | Custom Metal Components Fabrication |
 | ---------------------- | ----------------------------------- |
 | **Product Type**       | Engine Mounts                       |
@@ -26,7 +28,7 @@ tags: ["astro", "blogging", "learning in public"]
 | **Material Used**      | 22 Tons Steel                       |
 | **Time to Complete**   | [Number of Days]                    |
 
-### Client Information
+</div>
 
 ## Project Scope
 
