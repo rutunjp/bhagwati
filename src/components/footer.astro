@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import circularLogo from "../images/circular-logo.png";
 ---
 
-<footer class="footer">
+<footer class="footers">
   <Image class="footer-logo" src={circularLogo} alt="logo" />
   <div class="contact">
     <h2>+91-9963636362</h2>
@@ -22,7 +22,7 @@ import circularLogo from "../images/circular-logo.png";
   <p class="credit">Made by <a href="https://twitter.com/rutunj3">Rutunj</a></p>
 </footer>
 <style>
-  .footer {
+  .footers {
     display: grid;
     row-gap: 2rem;
     width: 100%;
@@ -64,7 +64,7 @@ import circularLogo from "../images/circular-logo.png";
   }
 
   @media only screen and (max-width: 767px) {
-    .footer {
+    .footers {
       grid-template-columns: 2fr 4fr;
       grid-template-rows: 2fr 1fr 1fr;
       grid-template-areas:
