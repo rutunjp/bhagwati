@@ -3,8 +3,6 @@ interface Props {
   title: string;
 }
 import { ViewTransitions, slide } from "astro:transitions";
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
 import NavLinks from "../components/navLinks.astro";
 
 const { title } = Astro.props;
@@ -33,7 +31,6 @@ const { title } = Astro.props;
         <slot />
       </div>
     </div>
-    <Footer />
 
     <style is:global>
       html {
