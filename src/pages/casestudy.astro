@@ -1,18 +1,43 @@
 ---
+import { Image } from "astro:assets";
 import CaseStudyCard from "../components/caseStudyCard.astro";
+import logo from "../images/logo.png";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Case Studies">
+  <a href="/">
+    <Image src={logo} alt="bhagwati-industries" class="logo" />
+  </a>
   <div class="casestudy-wrapper">
     <h1>Case Studies</h1>
-    <!-- <CaseStudyCard /> -->
+    <div class="case-study-grid">
+      <CaseStudyCard />
+      <CaseStudyCard />
+      <CaseStudyCard />
+    </div>
   </div>
-</Layout>
 
-<style>
-  .casestudy-wrapper {
-    background-color: blueviolet;
-  }
-  
-</style>
+  <style>
+    .logo {
+      padding-top: 1rem;
+      max-width: 256px;
+      height: auto;
+    }
+    .case-study-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media only screen and (max-width: 768px) {
+      .case-study-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0.5rem;
+      }
+
+      .logo {
+        max-width: 164px;
+      }
+    }
+  </style>
+</Layout>

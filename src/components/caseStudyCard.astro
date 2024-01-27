@@ -1,22 +1,45 @@
 ---
 import { Image } from "astro:assets";
-
+import RelianceWork from "../images/caseStudies/reliance/reliance.jpg";
 const props = Astro.props;
 ---
 
-<a href={"/casestudy"}>
+<a href="/caseStudies/reliance">
   <div class="card">
-    <Image class="image" src={props.caseStudy} alt="casestudy" />
-    <h1>{props.caseStudyName}</h1>
-    <h3>{props.serviceProvided}</h3>
+    <Image class="image" src={RelianceWork} alt="casestudy" />
+    <h3>Reliance Work</h3>
+    <p>Fabrication</p>
   </div>
-
-  <style>
+</a>
+<style>
+  @media screen and (max-width: 768px) {
     .card {
+      max-width: 256px;
       display: flex;
       flex-direction: column;
-      gap: 2;
+      align-items: start;
     }
-  
-  </style>
-</a>
+    .image {
+      object-fit: cover;
+    }
+  }
+  h3 {
+    color: #d90000;
+  }
+  p {
+    font-family: "RedHatMono";
+    color: #5a5a5a;
+  }
+  .card {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .image {
+    object-fit: cover;
+  }
+  .card * {
+    margin: 0;
+  }
+</style>

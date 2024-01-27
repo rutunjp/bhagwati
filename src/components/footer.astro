@@ -1,10 +1,12 @@
 ---
 import { Image } from "astro:assets";
 import circularLogo from "../images/circular-logo.png";
+import fullLogo from "../images/fullLogo.png";
+import map from "../images/map.png";
 ---
 
 <footer class="footers">
-  <Image class="footer-logo" src={circularLogo} alt="logo" />
+  <Image class="footer-logo" src={fullLogo} alt="logo" />
   <div class="contact">
     <h2>+91-9963636362</h2>
 
@@ -13,8 +15,7 @@ import circularLogo from "../images/circular-logo.png";
     <h2>inquiry@bhagwatiind.com</h2>
   </div>
   <p class="address">
-    Bhagwati Industries, GIDC Road, Makarpura GIDC, Makarpura, Vadodara,
-    Gujarat, India
+    <Image class="map" src={map} alt="map" />
   </p>
   <p class="copyright">
     Bhagwati Industries Copyright © 2024 - All rights reserved.
@@ -24,7 +25,7 @@ import circularLogo from "../images/circular-logo.png";
 <style>
   .footers {
     display: grid;
-    row-gap: 2rem;
+    row-gap: 1rem;
     width: 100%;
     text-align: center;
     align-items: center;
@@ -45,6 +46,10 @@ import circularLogo from "../images/circular-logo.png";
     max-width: 100%;
   }
 
+  .map {
+    max-width: 30%;
+    height: auto;
+  }
   .address {
     max-width: fit-content;
     grid-area: address;
@@ -65,15 +70,16 @@ import circularLogo from "../images/circular-logo.png";
 
   @media only screen and (max-width: 767px) {
     .footers {
-      grid-template-columns: 2fr 4fr;
+      grid-template-columns: 1fr 4fr;
       grid-template-rows: 2fr 1fr 1fr;
       grid-template-areas:
-        "footer-logo contact"
-        "address address"
+        "footer-logo footer-logo "
+        "contact address"
         "credit copyright";
       justify-content: "center";
     }
   }
+
   .copyright {
     grid-area: copyright;
     opacity: 0.6;

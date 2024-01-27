@@ -10,27 +10,8 @@ image:
 tags: ["astro", "blogging", "learning in public"]
 ---
 
-## Project Overview
-
-| **Client Name** | XYZ Manufacturing Co. |
-| --------------- | --------------------- |
-| **Industry**    | Automotive            |
-
-### Project Details
-
-<div class="case-study-table">
-
-| **Project Name**       | Custom Metal Components Fabrication |
-| ---------------------- | ----------------------------------- |
-| **Product Type**       | Engine Mounts                       |
-| **Project Start Date** | 21 Jan 2023                         |
-| **Project End Date**   | 22 Jan 2023                         |
-| **Material Used**      | 22 Tons Steel                       |
-| **Time to Complete**   | [Number of Days]                    |
-
-</div>
-
-## Project Scope
+ 
+ <div>
 
 ### Objectives
 
@@ -44,53 +25,46 @@ tags: ["astro", "blogging", "learning in public"]
 2. Quality assurance documentation.
 3. Delivery of products to XYZ Manufacturing Co. facility.
 
-### Milestones
+</div>
 
-1. **Design and Material Approval:** [Date]
-2. **Commencement of Fabrication:** [Date]
-3. **Quality Assurance Inspection:** [Date]
-4. **Product Delivery:** [Date]
+ 
 
-## Project Resources
+<div class="case-study-table">
 
-### Materials
+| **Project Name**       | Custom Metal Components Fabrication |
+| ---------------------- | ----------------------------------- |
+| **Product Type**       | Engine Mounts                       |
+| **Project Start Date** | 21 Jan 2023                         |
+| **Project End Date**   | 22 Jan 2023                         |
+| **Material Used**      | 22 Tons Steel                       |
+| **Time to Complete**   | [Number of Days]                    |
 
-- High-grade steel for engine mounts
+</div>
 
-## Project Metrics
+<div class="container">
 
 ### Cost
 
-- **Total Cost:** [Cost]
+- **Total Cost:** Rs.54,00,000
 - **Breakdown:**
-  - Materials: [Cost]
-  - Labor: [Cost]
-  - Overheads: [Cost]
+  - Materials: 20,00,000
+  - Labor: 30,00,000
+  - Overheads: 400,000
 
-### Weight
+</div>
+<div>
 
-- **Total Weight of Fabricated Components:** [Weight]
-
-## Challenges Faced
+### Challenges Faced
 
 1. **Supply Chain Delays:** Delays in the procurement of raw materials.
 2. **Design Modifications:** Client-requested modifications that affected the original schedule.
 3. **Quality Assurance:** Ensuring that all components met strict quality standards.
 
-## Results and Achievements
+</div> 
+<div class="conclusion-container">
 
-1. **On-Time Delivery:** Despite challenges, the project was delivered on schedule.
-2. **Client Satisfaction:** XYZ Manufacturing Co. expressed satisfaction with the quality of the fabricated components.
-3. **Cost Management:** Despite unforeseen challenges, the project was completed within the allocated budget.
-
-## Lessons Learned
-
-1. **Effective Communication:** Regular communication with the client helped manage expectations.
-2. **Contingency Planning:** Building in contingency plans for potential delays is crucial in the fabrication industry.
-3. **Adaptability:** Being able to adapt to design modifications without compromising quality is essential.
-
-## Conclusion
+### Conclusion
 
 The successful completion of the custom metal engine mounts fabrication project showcased the fabrication company's commitment to quality, client satisfaction, and project management. The experience gained from overcoming challenges will contribute to future projects' success.
 
----
+</div> 

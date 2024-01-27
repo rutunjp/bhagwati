@@ -2,39 +2,41 @@
 import Clients from "./Clients.astro";
 ---
 
-<div class="about-wrapper">
-  <div class="header">
-    <h2 class="heading">About Us</h2>
-    <p class="description">
-      We've successfully achieved and completed thousands of projects since in
-      over 40+ years of our business, lead through three generations coming up
-      with technical as well as managerial advances.
-    </p>
-  </div>
-  <div class="features-grid">
-    <div class="feature">
-      <h1>40<sup>+</sup></h1>
-      <p>years of experience</p>
-    </div>
-    <div class="feature">
-      <h1>ISO Certified</h1>
-      <p>
-        We are an ISO 9001:2015, ISO 3834-2:2021 & ISO 14001:2015 certified
-        company. Also prepared to cater any other client-specific quality &
-        management requirements.
+<section id="about">
+  <div class="about-wrapper">
+    <div class="header">
+      <h2 class="heading">About Us</h2>
+      <p class="description">
+        We've successfully achieved and completed thousands of projects since in
+        over 40+ years of our business, lead through three generations coming up
+        with technical as well as managerial advances.
       </p>
     </div>
-    <div class="feature">
-      <h1>18000<sup>+</sup></h1>
-      <p>
-        Our manufacturing facilities are widespread in a total area of 18,000+
-        sq. ft. collectively, with best-in-class infrastructural and
-        manufacturing facilities.
-      </p>
+    <div class="features-grid">
+      <div class="feature">
+        <h1>40<sup>+</sup></h1>
+        <p>years of experience</p>
+      </div>
+      <div class="feature">
+        <h1>ISO Certified</h1>
+        <p>
+          We are an ISO 9001:2015, ISO 3834-2:2021 & ISO 14001:2015 certified
+          company. Also prepared to cater any other client-specific quality &
+          management requirements.
+        </p>
+      </div>
+      <div class="feature">
+        <h1>18000<sup>+</sup></h1>
+        <p>
+          Our manufacturing facilities are widespread in a total area of 18,000+
+          sq. ft. collectively, with best-in-class infrastructural and
+          manufacturing facilities.
+        </p>
+      </div>
     </div>
+    <Clients />
   </div>
-  <Clients />
-</div>
+</section>
 
 <style>
   .about-wrapper {
@@ -43,14 +45,12 @@ import Clients from "./Clients.astro";
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    max-width: 50%;
   }
 
-  .description {
-    max-width: 30%;
-  }
   .features-grid {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 2rem;
   }
 
@@ -65,6 +65,12 @@ import Clients from "./Clients.astro";
   }
   .feature * {
     margin: 0;
+  }
+  .feature p {
+    width: 70%;
+  }
+  .description {
+    width: 70%;
   }
   @media only screen and (max-width: 767px) {
     .description {
