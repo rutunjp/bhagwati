@@ -4,7 +4,7 @@ import RelianceWork from "../images/caseStudies/reliance/reliance.jpg";
 const props = Astro.props;
 ---
 
-<a href="/caseStudies/reliance">
+<a href={`/caseStudies/${props.href}`}>
   <div class="card">
     <Image class="image" src={RelianceWork} alt="casestudy" />
     <h3>Reliance Work</h3>
@@ -12,17 +12,6 @@ const props = Astro.props;
   </div>
 </a>
 <style>
-  @media screen and (max-width: 768px) {
-    .card {
-      max-width: 256px;
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-    }
-    .image {
-      object-fit: cover;
-    }
-  }
   h3 {
     color: #d90000;
   }
@@ -41,5 +30,18 @@ const props = Astro.props;
   }
   .card * {
     margin: 0;
+  }
+  @media screen and (max-width: 768px) {
+    .card {
+      margin: auto;
+      max-width: 256px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .image {
+      object-fit: cover;
+    }
   }
 </style>

@@ -7,9 +7,7 @@ import welder from "../images/welder.png";
 
 <div class="hero-wrapper">
   <div class="hero-content">
-    <div>
-      <Image class="hero-logo" src={logo} alt="hero-logo" />
-    </div>
+    <Image class="hero-logo" src={logo} alt="hero-logo" />
     <div>
       <Image class="hero-image" src={welder} alt="Welder" />
       <p class="hero-subheading">
@@ -24,11 +22,13 @@ import welder from "../images/welder.png";
     font-family: "RedHatDisplayMedium", sans-serif;
     background-color: #f4f4f3;
   }
-
-  .hero-logo {
-    max-width: 50%;
-    height: auto;
+  @media screen and (min-width: 767px) {
+    .hero-logo {
+      max-width: 50%;
+      height: auto;
+    }
   }
+
   .hero-text {
     display: flex;
   }
@@ -54,19 +54,6 @@ import welder from "../images/welder.png";
     }
   }
 
-  @media only screen and (max-width: 767px) {
-    .hero-wrapper {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .hero-heading {
-      font-size: 4rem;
-    }
-
-    .hero-logo {
-    }
-  }
   .hero-content {
     display: flex;
     flex-direction: column;
@@ -74,9 +61,9 @@ import welder from "../images/welder.png";
     width: 70%;
   }
   .hero-image {
-    height: 40vh;
+    height: 60vh;
 
-    max-width: 100%;
+    width: 100%;
     object-fit: cover;
     filter: grayscale(0.8);
     transition:
@@ -107,16 +94,34 @@ import welder from "../images/welder.png";
     flex-direction: column;
     text-align: left;
   }
-
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 768px) {
     .hero-heading {
       font-size: 4rem;
+      text-align: center;
+    }
+    .hero-wrapper {
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
     }
 
     .hero-subheading {
-      max-width: 80vw;
-      font-size: 1rem;
-      white-space: nowrap;
+      font-size: 1.5rem;
+      letter-spacing: -0.5px;
+      text-align: center;
+    }
+    .hero-logo {
+      width: 100%;
+      height: auto;
+      margin: auto;
+    }
+    .hero-content {
+      margin-top: auto;
+      margin-bottom: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      width: 90%;
     }
   }
 </style>

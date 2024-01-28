@@ -10,7 +10,6 @@ image:
 tags: ["astro", "blogging", "learning in public"]
 ---
 
- 
  <div>
 
 ### Objectives
@@ -27,8 +26,6 @@ tags: ["astro", "blogging", "learning in public"]
 
 </div>
 
- 
-
 <div class="case-study-table">
 
 | **Project Name**       | Custom Metal Components Fabrication |
@@ -37,7 +34,7 @@ tags: ["astro", "blogging", "learning in public"]
 | **Project Start Date** | 21 Jan 2023                         |
 | **Project End Date**   | 22 Jan 2023                         |
 | **Material Used**      | 22 Tons Steel                       |
-| **Time to Complete**   | [Number of Days]                    |
+| **Time to Complete**   | 1min                                |
 
 </div>
 
@@ -53,13 +50,7 @@ tags: ["astro", "blogging", "learning in public"]
 
 </div>
 <div>
-
-### Challenges Faced
-
-1. **Supply Chain Delays:** Delays in the procurement of raw materials.
-2. **Design Modifications:** Client-requested modifications that affected the original schedule.
-3. **Quality Assurance:** Ensuring that all components met strict quality standards.
-
+ 
 </div> 
 <div class="conclusion-container">
 
@@ -67,4 +58,4 @@ tags: ["astro", "blogging", "learning in public"]
 
 The successful completion of the custom metal engine mounts fabrication project showcased the fabrication company's commitment to quality, client satisfaction, and project management. The experience gained from overcoming challenges will contribute to future projects' success.
 
-</div> 
+</div>

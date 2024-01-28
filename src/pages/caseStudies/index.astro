@@ -1,17 +1,16 @@
 ---
-import { Image } from "astro:assets";
-import CaseStudyCard from "../components/caseStudyCard.astro";
-import logo from "../images/logo.png";
-import Layout from "../layouts/Layout.astro";
+import CaseStudyCard from "../../components/caseStudyCard.astro";
+
+import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="Case Studies">
-  <a href="/">
-    <Image src={logo} alt="bhagwati-industries" class="logo" />
-  </a>
   <div class="casestudy-wrapper">
-    <h1>Case Studies</h1>
+     
     <div class="case-study-grid">
+      <CaseStudyCard />
+      <CaseStudyCard />
+      <CaseStudyCard />
       <CaseStudyCard />
       <CaseStudyCard />
       <CaseStudyCard />
@@ -19,24 +18,24 @@ import Layout from "../layouts/Layout.astro";
   </div>
 
   <style>
-    .logo {
-      padding-top: 1rem;
-      max-width: 256px;
-      height: auto;
+    .casestudy-wrapper {
+      min-height: 80vh;
+      margin-bottom: 4rem;
     }
     .case-study-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      row-gap: 2rem;
     }
 
     @media only screen and (max-width: 768px) {
+      .casestudy-wrapper {
+        text-align: center;
+        justify-content: center;
+      }
       .case-study-grid {
         grid-template-columns: repeat(1, 1fr);
-        gap: 0.5rem;
-      }
-
-      .logo {
-        max-width: 164px;
+        gap: 2rem;
       }
     }
   </style>

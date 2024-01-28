@@ -1,11 +1,15 @@
 ---
 interface Props {
   title: string;
+  logoHide?: string;
 }
 import { ViewTransitions, slide } from "astro:transitions";
 import NavLinks from "../components/navLinks.astro";
+import Footer2 from "../components/Footer2.astro";
+import { Image } from "astro:assets";
+import logo from "../images/logo.png";
 
-const { title } = Astro.props;
+const { title, logoHide } = Astro.props;
 ---
 
 <!doctype html>
@@ -25,11 +29,19 @@ const { title } = Astro.props;
   </head>
   <body>
     <div class="app-wrapper">
-      <!-- <Navbar /> -->
+      {
+        !logoHide && (
+          <a href="/" class="logo">
+            <Image src={logo} alt="logo" />
+          </a>
+        )
+      }
       <NavLinks />
+      <h1>{title}</h1>
       <div>
         <slot />
       </div>
+      <Footer2 />
     </div>
 
     <style is:global>
@@ -69,6 +81,13 @@ const { title } = Astro.props;
         font-display: swap;
       }
       @font-face {
+        font-family: "RedHatDisplayLight";
+        src: url("/fonts/RedHat/Display/Light.ttf") format("truetype");
+        font-weight: light;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
         font-family: "RedHatTextRegular";
         src: url("/fonts/RedHat/Text/Regular.ttf") format("truetype");
         font-weight: normal;
@@ -103,15 +122,21 @@ const { title } = Astro.props;
         margin: 0px;
       }
 
-      .logo-wrapper {
-        max-width: 256px;
+      .logo a,
+      img {
+        padding-top: 1rem;
+        width: 18rem;
         height: auto;
       }
+
       .app-wrapper {
         padding-left: 5vw;
         padding-right: 5vw;
       }
 
+      .app-wrapper a {
+        margin: auto;
+      }
       :root {
         --accent: 136, 58, 234;
         --accent-light: 224, 204, 250;
@@ -142,7 +167,19 @@ const { title } = Astro.props;
       li {
         font-family: "RedHatTextRegular";
       }
-      @media only screen and (max-width: 767px) {
+      @media only screen and (max-width: 768px) {
+        .logo {
+          display: flex;
+          justify-self: center;
+        }
+        .logo a {
+          padding-top: 0.5rem;
+        }
+        .logo img {
+          margin: auto;
+          width: 8rem;
+          height: auto;
+        }
         .heading,
         h1 {
           font-size: 2rem;

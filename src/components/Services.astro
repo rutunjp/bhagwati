@@ -31,12 +31,15 @@
   }
 
   #services {
-    /* padding-top:0rem; */ 
+    /* padding-top:0rem; */
     height: 90vh;
   }
-  .services {
-    width: 50%;
+  @media screen and (min-width: 767px) {
+    .services {
+      width: 50%;
+    }
   }
+
   .services-wrapper {
     height: 100%;
     display: flex;
@@ -62,25 +65,7 @@
   li {
     text-decoration: none;
   }
-  @media only screen and (max-width: 767px) {
-    .services-wrapper {
-      flex-direction: column;
-    }
-    .services-wrapper ul {
-      font-size: 1rem;
-      padding: 0;
-    }
 
-    .services-wrapper ul li {
-      margin-left: auto;
-      padding-right: 0;
-
-      border-top: 1px solid black;
-    }
-    .services-wrapper h2 {
-      margin: 0px;
-    }
-  }
   .services-wrapper ul li {
     padding: 0rem;
     border-top: 0.5px solid black;
@@ -104,5 +89,31 @@
   li:hover {
     text-decoration: underline;
     transition: all;
+  }
+  @media only screen and (max-width: 768px) {
+    .services-wrapper {
+      width: 100%;
+      flex-direction: column;
+    }
+    .services-wrapper ul {
+      font-size: 1rem;
+      padding: 0;
+    }
+    .services {
+      width: 90%;
+    }
+
+    .services-wrapper ul li {
+      margin-left: auto;
+      padding-right: 0;
+
+      border-top: 1px solid black;
+    }
+    .services-wrapper h2 {
+      margin: 0px;
+    }
+    .services-text {
+      max-width: 90%;
+    }
   }
 </style>

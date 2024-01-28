@@ -45,7 +45,11 @@ import Clients from "./Clients.astro";
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    max-width: 50%;
+  }
+  @media screen and (min-width: 767px) {
+    .about-wrapper {
+      max-width: 50%;
+    }
   }
 
   .features-grid {
@@ -66,22 +70,20 @@ import Clients from "./Clients.astro";
   .feature * {
     margin: 0;
   }
-  .feature p {
-    width: 70%;
-  }
+
   .description {
     width: 70%;
   }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 768px) {
+    .about-wrapper {
+      width: 90%;
+      gap: 2rem;
+    }
     .description {
-      max-width: 100%;
-      margin-left: auto;
+      width: 100%;
     }
     .features-grid {
       flex-direction: column;
-    }
-    .about-wrapper {
-      gap: 2rem;
     }
   }
 </style>

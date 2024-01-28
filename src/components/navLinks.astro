@@ -1,13 +1,38 @@
 <nav class="nav-links">
   <ul>
-    <!-- <li><a href="">Infrastructure</a></li> -->
-    <li><a href="#services">Services</a></li>
-    <li><a href="/casestudy">Case Studies</a></li>
-    <li><a href="#about">About Us</a></li>
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/caseStudies">Case Studies</a></li>
+    <li><a href="/#about">About Us</a></li>
   </ul>
 </nav>
 
 <style>
+  .nav-links {
+    width: fit-content;
+    position: absolute;
+    top: 0;
+  }
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      width: 100%;
+      position: relative;
+    }
+    .nav-links li {
+      padding: 0rem 2px;
+      display: inline-block;
+    }
+    .nav-links li:first-child {
+      padding-left: 0rem;
+    }
+    .nav-links ul {
+      padding-top: 1rem;
+      margin: auto;
+      width: fit-content;
+    }
+    .nav-links li a {
+      font-size: 1rem;
+    }
+  }
   a {
     font-size: 1.5rem;
     color: black;

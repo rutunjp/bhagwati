@@ -1,0 +1,139 @@
+---
+import { Image } from "astro:assets";
+import circularLogo from "../images/circular-logo.png";
+import fullLogo from "../images/fullLogo.png";
+import map from "../images/maps.png";
+---
+
+<footer>
+  <div class="container"> 
+    <div class="top-bar">
+      <Image src={fullLogo} class="logo" alt="logo" />
+    </div>
+
+    <!-- Contact Information -->
+    <div class="contact-info">
+      <!-- Phone numbers -->
+      <div class="info-section phoneNumbers">
+        <a href="tel:+919978354323"><h3>+91 9978354323</h3></a>
+
+        <a> <h3>+91 9978354323</h3></a>
+
+        <!-- Repeat for other phone numbers -->
+      </div>
+
+      <!-- Address -->
+      <div class="info-section">
+        <a
+          target="_blank"
+          href="https://www.google.com/maps?daddr=Bhagwati+Industries,+GIDC+Road,+Makarpura+GIDC,+Makarpura,+Vadodara,+Gujarat,+India"
+          ><h3 class="address">
+            19- GIDC Baroda, Hetalinpura Road, 490223, Gujarat
+          </h3></a
+        >
+      </div>
+
+      <!-- Certificates and Profile -->
+      <div class="info-section phoneNumbers">
+        <a><h3>Company Certificates</h3></a>
+        <a><h3>Company Profile</h3></a>
+      </div>
+    </div>
+
+    <!-- Large image -->
+    <Image class="large-image" src={map} alt="Large Placeholder Image" />
+  </div>
+</footer>
+<style>
+  .container {
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 2rem;
+  }
+
+  .logo {
+    width: 25%;
+    height: auto;
+  }
+
+  .contact-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0px;
+  }
+  .large-image {
+    max-width: 100%;
+    max-height: 50vh;
+    overflow: hidden;
+  }
+  .info-section {
+    display: flex;
+    justify-items: center;
+    width: 100%;
+    border: #e4e4e4 1px solid;
+    overflow: hidden;
+    font-size: 1.2rem;
+    color: #c0c0c0;
+  }
+  .phoneNumbers {
+    border: #e4e4e4 1px solid;
+  }
+  .info-section * {
+    padding: 0.5rem 0rem;
+    width: 100%;
+    font-family: "RedHatDisplayLight";
+  }
+  .info-section a {
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+  }
+  .info-section a:hover {
+    transition: 300ms linear;
+    color: #000;
+    background-color: #e4e4e4;
+  }
+
+  .info-section h3 {
+    margin: auto;
+    width: fit-content;
+  }
+  .phoneNumbers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .address {
+    text-align: center;
+  }
+  .top-bar {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: fit-content;
+  }
+  @media screen and (max-width: 768px) {
+    .logo {
+      width: 45%;
+      height: auto;
+    }
+    .phoneNumbers {
+      flex-direction: row;
+    }
+    .contact-info {
+      flex-direction: column;
+    }
+    .company-docs {
+      flex-direction: column;
+    }
+  }
+</style>
